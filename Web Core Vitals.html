@@ -179,11 +179,10 @@
         return;
     }
 
-    // Wyczyść wyniki przed analizą nowych stron
+    
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = "";
 
-    // Przeprowadź analizę dla każdej wybranej strony
     selectedPageCheckboxes.forEach(checkbox => {
         const selectedPageUrl = checkbox.value;
         getWebCoreVitals(selectedPageUrl);
@@ -219,41 +218,41 @@
 
         function getColorClassForFCP(fcpInSeconds) {
             if (fcpInSeconds < 1.8) {
-                return "green"; // Zielony kolor dla dobrej wydajności
+                return "green";  
             } else if (fcpInSeconds >= 1.8 && fcpInSeconds < 3) {
-                return "orange"; // Pomarańczowy kolor dla akceptowalnej wydajności
+                return "orange";  
             } else {
-                return "red"; // Czerwony kolor dla słabej wydajności
+                return "red";  
             }
         }
 
         function getColorClassForLCP(lcpInSeconds) {
             if (lcpInSeconds < 2.5) {
-                return "green"; // Zielony kolor dla dobrej wydajności
+                return "green";  
             } else if (lcpInSeconds >= 2.5 && lcpInSeconds < 4) {
-                return "orange"; // Pomarańczowy kolor dla akceptowalnej wydajności
+                return "orange";  
             } else {
-                return "red"; // Czerwony kolor dla słabej wydajności
+                return "red";  
             }
         }
 
         function getColorClassForCLS(cls) {
             if (cls <= 100) {
-                return "green"; // Zielony kolor dla dobrej wydajności
+                return "green";  
             } else if (cls > 100 && cls <= 250) {
-                return "orange"; // Pomarańczowy kolor dla akceptowalnej wydajności
+                return "orange";  
             } else {
-                return "red"; // Czerwony kolor dla słabej wydajności
+                return "red";  
             }
         }
 
         function getColorClassForINP(inp) {
             if (inp < 200) {
-                return "green"; // Zielony kolor dla dobrej wydajności
+                return "green";  
             } else if (inp >= 200 && inp < 500) {
-                return "orange"; // Pomarańczowy kolor dla akceptowalnej wydajności
+                return "orange";  
             } else {
-                return "red"; // Czerwony kolor dla słabej wydajności
+                return "red";  
             }
         }
     </script>
